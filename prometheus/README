@@ -1,0 +1,11 @@
+Build the image with:
+
+`bazel build :image.tar`
+(Notice the .tar - this will ensure an image that can be loaded into Docker).
+
+Load the image into docker with:
+
+`docker load -i ../bazel-bin/prometheus/image.tar`
+
+Run the image and make sure you bind-mount the directory containing the prometheus.yml file into /config:
+`docker run -ti -v `pwd`:/config -v some_dir:/data -p9090:9090 bazel/prometheus:image`
