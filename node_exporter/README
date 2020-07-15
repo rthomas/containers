@@ -1,0 +1,4 @@
+Run with:
+
+`docker run -v "/:/host:ro,rslave" -p 9100:9100 bazel/node_exporter:image --path.rootfs=/host`
+
