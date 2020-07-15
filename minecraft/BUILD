@@ -15,7 +15,7 @@ container_image(
   base = "@openjdk//image",
   tars = [":minecraft"],
   workdir = "/config",
-  cmd = [
+  entrypoint = [
     "java",
     "-Xms2G",
     "-Xmx2G",
