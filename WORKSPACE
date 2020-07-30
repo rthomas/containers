@@ -18,7 +18,7 @@ container_pull(
   name = "alpine_linux_amd64",
   registry = "index.docker.io",
   repository = "library/alpine",
-  tag = "3.12",
+  digest = "sha256:a15790640a6690aa1730c38cf0a440e2aa44aaca9b0e8931a9f2b0d7cc90fd65",
 )
 
 container_pull(
