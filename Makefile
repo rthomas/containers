@@ -1,4 +1,4 @@
-IMAGES=minecraft.img prometheus.img grafana.img node_exporter.img
+IMAGES=minecraft.img prometheus.img grafana.img node_exporter.img snmp_exporter.img
 
 clean:
 	bazel clean
