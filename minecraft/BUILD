@@ -5,7 +5,7 @@ pkg_tar (
   name = "minecraft",
   srcs = [
     "minecraft-server-1.16.2.jar",
-    "config",
+    "data",
   ],
   package_dir = "/"
 )
@@ -14,7 +14,7 @@ container_image(
   name = "image",
   base = "@openjdk//image",
   tars = [":minecraft"],
-  workdir = "/config",
+  workdir = "/data",
   entrypoint = [
     "java",
     "-Xms2G",
@@ -22,6 +22,5 @@ container_image(
     "-jar",
     "/minecraft-server-1.16.2.jar",
     "-nogui",
-    "--universe=/universe",
   ],
 )
