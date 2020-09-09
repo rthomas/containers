@@ -8,3 +8,4 @@ images: $(IMAGES)
 %.img:
 	bazel build $(@:.img=):image.tar
 	docker load -i bazel-bin/$(@:.img=)/image.tar
+	docker tag bazel/$(@:.img=):image $(@:.img=):latest
