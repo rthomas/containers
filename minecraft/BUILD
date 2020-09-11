@@ -4,7 +4,7 @@ load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 pkg_tar (
   name = "minecraft",
   srcs = [
-    "minecraft-server-1.16.2.jar",
+    "minecraft-server-1.16.3.jar",
     "data",
   ],
   package_dir = "/"
@@ -20,7 +20,7 @@ container_image(
     "-Xms2G",
     "-Xmx2G",
     "-jar",
-    "/minecraft-server-1.16.2.jar",
+    "/minecraft-server-1.16.3.jar",
     "-nogui",
   ],
 )
